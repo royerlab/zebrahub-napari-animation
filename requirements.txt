@@ -1,0 +1,3 @@
+napari==0.4.17
+napari-animation
+napari-ome-zarr==0.5.2
