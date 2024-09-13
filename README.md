@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/639614219.svg)](https://zenodo.org/doi/10.5281/zenodo.13761258)
+
 # Zebrahub's `napari-animation` Demo
 
 This repository contains an example of how the videos from the zebrahub articles were rendered.
