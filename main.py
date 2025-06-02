@@ -17,9 +17,13 @@ def main() -> None:
 
     # disabling multiscale
     if not MULTISCALE:
-        for channel in ("mezzo", "h2afva"):
-            viewer.layers[channel].multiscale = False
-            viewer.layers[channel].data = viewer.layers[channel].data[0]
+        for layer in list(viewer.layers):
+            data, state, _  = layer.as_layer_data_tuple()
+            state["multiscale"] = False
+            viewer.layers.remove(layer)
+            viewer.add_image(
+                data[0], **state,
+            )
 
     # aesthetics changes
     viewer.layers["h2afva"].colormap = "cyan"
